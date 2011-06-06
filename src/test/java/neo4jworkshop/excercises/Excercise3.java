@@ -15,7 +15,7 @@ public class Excercise3 extends AbstractNeo4JExcercise{
         Member ron = clubService.getMember("NDQ09H4");
         Member mathieu = clubService.getMember("NDP69D5");
         Team S3 = clubService.getTeam("150");
-        Path path = clubService.getPathBetween(ron.getNode(), mathieu.getNode());
+        Path path = clubService.shortestPathBetween(ron.getNode(), mathieu.getNode());
         assertNotNull("Ron and Mathieu should be connected", path);
         assertEquals(2, path.length());
         assertEquals("S3", new Team(path.lastRelationship().getOtherNode(mathieu.getNode())).getName());
@@ -26,7 +26,7 @@ public class Excercise3 extends AbstractNeo4JExcercise{
         Member dennis = clubService.getMember("NGN03F0");
         Member mathieu = clubService.getMember("NDP69D5");
         Team S3 = clubService.getTeam("150");
-        Path path = clubService.getPathBetween(dennis.getNode(), mathieu.getNode());
+        Path path = clubService.shortestPathBetween(dennis.getNode(), mathieu.getNode());
         assertNotNull("Ron and Mathieu should be connected", path);
         assertEquals(4, path.length());
         assertEquals("S3", new Team(path.lastRelationship().getOtherNode(mathieu.getNode())).getName());

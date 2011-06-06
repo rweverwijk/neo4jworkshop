@@ -33,7 +33,7 @@ public class ClubService {
         return new Team(index.get(Team.TEAM_NUMBER_KEY, teamNumber).getSingle());
     }
 
-    public Path getPathBetween(Node node1, Node node2) {
+    public Path shortestPathBetween(Node node1, Node node2) {
         PathFinder<Path> pathPathFinder = GraphAlgoFactory.shortestPath(StandardExpander.DEFAULT, 10);
         return pathPathFinder.findSinglePath(node1, node2);
     }
