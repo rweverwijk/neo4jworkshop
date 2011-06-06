@@ -10,7 +10,7 @@ import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 
-public class Excercise2 extends AbstractNeo4JExcercise {
+public class Exercise2 extends AbstractNeo4JExcercise {
 
     @Test
     public void testTeamPlayers() {

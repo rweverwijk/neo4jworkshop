@@ -9,7 +9,7 @@ import org.neo4j.graphdb.Path;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
-public class Excercise3 extends AbstractNeo4JExcercise {
+public class Exercise3 extends AbstractNeo4JExcercise {
     @Test
     public void ConnectionBetweenDirectNodes() {
         Member ron = clubService.getMember("NDQ09H4");

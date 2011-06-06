@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
-public class Excercise1 extends AbstractNeo4JExcercise {
+public class Exercise1 extends AbstractNeo4JExcercise {
 
     @Test
     public void RonIsPlayingInS3() {
