@@ -10,17 +10,15 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
 public class Excercise3 extends AbstractNeo4JExcercise {
-
-    @Test
-    public void AllPathsBetweenNodes() {
-        Member dennis = clubService.getMember("NGN03F0");
+     @Test
+    public void ConnectionBetweenDirectNodes() {
+        Member ron = clubService.getMember("NDQ09H4");
         Member mathieu = clubService.getMember("NDP69D5");
-
-        Iterable<Path> pathIterable = clubService.allPathsBetween(dennis.getNode(), mathieu.getNode());
-        int numberOfPaths = 0;
-        for (Path path : pathIterable) {
-            numberOfPaths++;
-        }
-        assertEquals(557, numberOfPaths);
+        Team S3 = clubService.getTeam("150");
+        Path path = clubService.shortestPathBetween(ron.getNode(), mathieu.getNode());
+        assertNotNull("Ron and Mathieu should be connected", path);
+        assertEquals(2, path.length());
+        assertEquals("S3", new Team(path.lastRelationship().getOtherNode(mathieu.getNode())).getName());
     }
+
 }
