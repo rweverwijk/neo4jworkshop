@@ -37,4 +37,9 @@ public class ClubService {
         PathFinder<Path> pathPathFinder = GraphAlgoFactory.shortestPath(StandardExpander.DEFAULT, 10);
         return pathPathFinder.findSinglePath(node1, node2);
     }
+
+    public Iterable<Path> allPathsBetween(Node node1, Node node2) {
+        PathFinder<Path> pathPathFinder = GraphAlgoFactory.allPaths(StandardExpander.DEFAULT, 10);
+        return pathPathFinder.findAllPaths(node1, node2);
+    }
 }
