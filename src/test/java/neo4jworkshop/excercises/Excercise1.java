@@ -1,11 +1,12 @@
-package neo4jworkshop.model;
+package neo4jworkshop.excercises;
 
-import neo4jworkshop.exercises.AbstractNeo4JExcercise;
+import neo4jworkshop.model.Member;
+import neo4jworkshop.util.AbstractNeo4JExcercise;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
-public class MemberTest extends AbstractNeo4JExcercise {
+public class Excercise1 extends AbstractNeo4JExcercise {
 
     @Test
     public void RonIsPlayingInS3() {

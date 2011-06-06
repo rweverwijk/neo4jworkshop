@@ -1,4 +1,4 @@
-package neo4jworkshop.exercises;
+package neo4jworkshop.util;
 
 import neo4jworkshop.service.ClubService;
 import neo4jworkshop.util.NeoDatabaseCreator;
