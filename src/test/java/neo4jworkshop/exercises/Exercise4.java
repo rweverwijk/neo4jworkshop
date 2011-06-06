@@ -1,7 +1,6 @@
-package neo4jworkshop.excercises;
+package neo4jworkshop.exercises;
 
 import neo4jworkshop.model.Member;
-import neo4jworkshop.model.Team;
 import neo4jworkshop.util.AbstractNeo4JExcercise;
 import org.junit.Test;
 import org.neo4j.graphdb.Path;
