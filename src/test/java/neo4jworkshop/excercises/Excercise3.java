@@ -15,7 +15,6 @@ public class Excercise3 extends AbstractNeo4JExcercise {
     public void AllPathsBetweenNodes() {
         Member dennis = clubService.getMember("NGN03F0");
         Member mathieu = clubService.getMember("NDP69D5");
-        Team S3 = clubService.getTeam("150");
 
         Iterable<Path> pathIterable = clubService.allPathsBetween(dennis.getNode(), mathieu.getNode());
         int numberOfPaths = 0;
