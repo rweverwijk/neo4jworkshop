@@ -14,7 +14,7 @@ public class Member extends DelegatingNodeObject {
     }
 
     public Team getMyTeam() {
-        return new Team(getNode().getSingleRelationship(DynamicRelationshipType.withName("player_of"), Direction.OUTGOING).getEndNode());
+        return new Team(null);
     }
 
     public String getName() {

@@ -39,46 +39,14 @@ public class ClubService {
     }
 
     public Path shortestPathBetween(Node node1, Node node2) {
-        PathFinder<Path> pathPathFinder = GraphAlgoFactory.shortestPath(StandardExpander.DEFAULT, 10);
-        return pathPathFinder.findSinglePath(node1, node2);
+        return null;
     }
 
     public Iterable<Path> defaultAllPathsBetween(Node startNode, Node endNode) {
-        PathFinder<Path> pathPathFinder = GraphAlgoFactory.allPaths(StandardExpander.DEFAULT, 10);
-        return pathPathFinder.findAllPaths(startNode, endNode);
+        return null;
     }
 
     public Iterable<Path> ownAllPathsBetween(Node startNode, Node endNode) {
-        return createTraversalDescription(endNode).traverse(startNode);
-    }
-
-    protected TraversalDescription createTraversalDescription(final Node endNode) {
-        TraversalDescription description = new TraversalDescriptionImpl()
-                .depthFirst()
-                .uniqueness(Uniqueness.RELATIONSHIP_PATH)
-                .evaluator(new AllPathsEvaluator(endNode));
-
-        return description;
-    }
-
-    public class AllPathsEvaluator implements Evaluator {
-
-        private Node endNode;
-
-        public AllPathsEvaluator(Node endNode) {
-
-            this.endNode = endNode;
-        }
-
-        public Evaluation evaluate(Path path) {
-            if (path.length() <= 10) {
-                if (path.endNode().equals(endNode)) {
-                    return Evaluation.INCLUDE_AND_PRUNE;
-                } else {
-                    return Evaluation.EXCLUDE_AND_CONTINUE;
-                }
-            }
-            return Evaluation.EXCLUDE_AND_PRUNE;
-        }
+        return null;
     }
 }
