@@ -1,4 +1,4 @@
-package neo4jworkshop.excercises;
+package neo4jworkshop.exercises;
 
 import neo4jworkshop.model.Member;
 import neo4jworkshop.model.Team;
@@ -10,7 +10,7 @@ import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 
-public class Excercise2 extends AbstractNeo4JExcercise {
+public class Exercise2 extends AbstractNeo4JExcercise {
 
     @Test
     public void testTeamPlayers() {

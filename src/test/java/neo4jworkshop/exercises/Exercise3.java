@@ -1,4 +1,4 @@
-package neo4jworkshop.excercises;
+package neo4jworkshop.exercises;
 
 import neo4jworkshop.model.Member;
 import neo4jworkshop.model.Team;
@@ -9,7 +9,7 @@ import org.neo4j.graphdb.Path;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
-public class Excercise3 extends AbstractNeo4JExcercise {
+public class Exercise3 extends AbstractNeo4JExcercise {
      @Test
     public void ConnectionBetweenDirectNodes() {
         Member ron = clubService.getMember("NDQ09H4");

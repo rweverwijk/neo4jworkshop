@@ -1,21 +1,19 @@
-package neo4jworkshop.excercises;
+package neo4jworkshop.exercises;
 
 import neo4jworkshop.model.Member;
-import neo4jworkshop.model.Team;
 import neo4jworkshop.util.AbstractNeo4JExcercise;
 import org.junit.Test;
 import org.neo4j.graphdb.Path;
 
 import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNotNull;
 
-public class Excercise4 extends AbstractNeo4JExcercise {
+public class Exercise5 extends AbstractNeo4JExcercise {
     @Test
-    public void defaultAllPathsBetweenNodes() {
+    public void ownAllPathsBetweenNodes() {
         Member dennis = clubService.getMember("NGN03F0");
         Member mathieu = clubService.getMember("NDP69D5");
 
-        Iterable<Path> pathIterable = clubService.defaultAllPathsBetween(dennis.getNode(), mathieu.getNode());
+        Iterable<Path> pathIterable = clubService.ownAllPathsBetween(dennis.getNode(), mathieu.getNode());
         int numberOfPaths = 0;
         for (Path path : pathIterable) {
             numberOfPaths++;
